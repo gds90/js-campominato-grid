@@ -40,15 +40,15 @@ function createGrid(){
     switch (level) {
         case '1':
             numRows = 10;
-            numCells = (100 / 10);
+            numCells = 100;
             break;
         case '2':
             numRows = 9;
-            numCells = (81 / 9);
+            numCells = 81;
             break;
         case '3':
             numRows = 7;
-            numCells = (49 / 7);
+            numCells = 49;
             break;
         default: 
             break;
@@ -58,11 +58,12 @@ function createGrid(){
     for (let i = 0; i < numRows; i++){
                     
         const row = document.createElement('div');
+        
                     
             // tramite un ciclo for, vado a crearmi le celle in ogni riga;
-            for (let x = 0; x < numCells; x++){
+            for (let x = 0; x < (numCells / numRows); x++){
 
-                const cellNumber = ((i+1));
+                const cellNumber = ((i+1) * (x+1) - 1);
 
                 let numberedCell = createCell(cellNumber);
                 
