@@ -6,7 +6,11 @@
 // creo una funzione che mi permette di creare una cella con all'interno un numero (x)
 function createCell(x){
     const cell = document.createElement('div');
+
+    // aggiungo la classe 'cell' alla cella creata
     cell.classList.add('cell')
+
+    // aggiungo il numero (x) all'interno della cella
     cell.innerText = x;
 
     return cell
@@ -21,7 +25,7 @@ const playButton = document.getElementById('play')
 // associo al bottone recueperato un eventListener che mi permetterà di formare la griglia
 playButton.addEventListener('click', function(){
     
-    // tramite un ciclo for, creo le 100 celle della griglia aiutandomi con la funzione creata precedentemente
+    // tramite un ciclo for, creo le 100 celle numerate della griglia aiutandomi con la funzione creata precedentemente
     for (let i=0; i<100; i++){
         let numberedCell = createCell(i+1);
         grid.appendChild(numberedCell);
