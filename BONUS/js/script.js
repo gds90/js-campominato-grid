@@ -34,7 +34,9 @@ playButton.addEventListener('click', function(){
         // creo un event listener per ogni cella creata che mi permette di colorarla di azzurro quando viene cliccata
         numberedCell.addEventListener('click', function(){
             this.classList.toggle('clicked');
+            console.log("Hai cliccato la cella numero: " + numberedCell.textContent);
         })
+
 
         // FINE BONUS
 
