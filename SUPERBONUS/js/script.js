@@ -58,12 +58,11 @@ function createGrid(){
     for (let i = 0; i < numRows; i++){
                     
         const row = document.createElement('div');
-        
                     
             // tramite un ciclo for, vado a crearmi le celle in ogni riga;
             for (let x = 0; x < (numCells / numRows); x++){
 
-                const cellNumber = ((i+1) * (x+1) - 1);
+                const cellNumber = ((x * numRows) + i + 1);
 
                 let numberedCell = createCell(cellNumber);
                 
