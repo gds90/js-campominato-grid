@@ -25,6 +25,9 @@ const playButton = document.getElementById('play')
 // associo al bottone recueperato un eventListener che mi permetterà di formare la griglia
 playButton.addEventListener('click', function(){
     
+    // svuoto l'elemento grid per evitare di generare più griglie 
+    grid.innerHTML = "";
+    
     // tramite un ciclo for, creo le 100 celle numerate della griglia aiutandomi con la funzione creata precedentemente
     for (let i=0; i<100; i++){
         let numberedCell = createCell(i+1);
