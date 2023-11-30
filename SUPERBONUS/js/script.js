@@ -97,7 +97,76 @@ playButton.addEventListener('click', function(){
 })
             
             
-            
+/* // CORREZIONE FABRIZIO 
+
+// DEFINIZIONE DELLA FUNZIONE CHE CREA GRAFICAMENTE LA SINGOLA CASELLA
+function createCell(num){
+    const cell = document.createElement('div');
+
+    cell.classList.add('cell');
+    cell.style.width = `calc(100% / ${cells_in_row})`;
+    cell.style.height = cell.style.width;
+    cell.innerText = num;
+
+    return cell;
+}
+
+function createGrid(cells_number, cells_in_row){
+    for (let i=1; i<=cellsNumber; i++){
+        // CREAZIONE DELLA SINGOLA CASELLA
+        let cell = createCell(i, cells_in_row);
+    
+        // creo un event listener per ogni cella creata che mi permette di colorarla di azzurro quando viene cliccata
+                numberedCell.addEventListener('click', function(){
+                    this.classList.toggle('clicked');
+                    console.log("Hai cliccato la cella numero: " + numberedCell.textContent);
+                })
+    
+        grid.appendChild(cell);
+    }
+    
+}
+
+// DEFINIZIONE DELLA FUNZIONE CHE GENERA LA GRIGLIA DI GIOCO
+function createNewGame(){
+    const grid = document.getElementById('grid')
+
+    const difficulty = document.getElementById('difficulty');
+    let level = parseInt(difficulty.value);
+
+    let cellsNumber;
+    let cellsPerRow;
+
+    switch(level){
+        case 1:
+            cellsNumber = 100;
+            break;
+        case 2:
+            cellsNumber = 81;
+            break;
+        case 3:
+            cellsNumber = 49;
+            break;
+        default:
+            alert('Seleziona un livello di difficoltà prima di premere il pulsante')
+            break;
+    }
+
+    cellsPerRow = Math.sqrt(cellsNumber);  -> radice quadrata di cellsNumber;
+
+
+    grid.innerHTML = '';
+    createGrid(cellsNumber, cellsPerRow);
+    
+}
+
+// RECUPERO IL PULSANTE PLAY E GLI AGGIUNGO L'EVENT LISTENER
+const play_btn = document.getElementById('play');
+play_btn.addEventListener('click', function(){
+    createNewGame();
+})
+*/
+
             
             
             

@@ -36,5 +36,36 @@ playButton.addEventListener('click', function(){
 })
 
 
+/* // CORREZIONE FABRIZIO 
 
+// DEFINIZIONE DELLA FUNZIONE CHE CREA GRAFICAMENTE LA SINGOLA CASELLA
+function createCell(num){
+    const cell = document.createElement('div');
+
+    cell.classList.add('cell');
+    square.innerText = num;
+
+    return cell;
+}
+
+
+// DEFINIZIONE DELLA FUNZIONE CHE GENERA LA GRIGLIA DI GIOCO
+function createNewGame(){
+    const grid = document.getElementById('grid')
+    grid.innerHTML = '';
+    
+    for (let i=1; i<=100; i++){
+        // CREAZIONE DELLA SINGOLA CASELLA
+        let cell = createCell(i);
+
+        grid.appendChild(cell);
+    }
+}
+
+// RECUPERO IL PULSANTE PLAY E GLI AGGIUNGO L'EVENT LISTENER
+const play_btn = document.getElementById('play');
+play_btn.addEventListener('click', function(){
+    createNewGame();
+})
+*/
 
